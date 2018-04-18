@@ -1,0 +1,273 @@
+/* Comportamiento General del menú*/
+body{
+    display: flex;
+}
+.ContentSystem{
+    margin-left: 320px;
+}
+.ContentSystem2{
+    margin-left: 50px;
+}
+.hamburgertop{
+    position:fixed;
+    width: 320px;
+    height: 100px;
+    background: rgb(242, 242, 242);
+    overflow-x: hidden;
+    overflow-y:hidden;
+}
+/*Miniplayer*/
+.miniplayer{
+    display: flex;
+    position: fixed;
+    background: dodgerblue;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 99;
+}
+.buscarbutton{
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+.buscar .btn{
+    min-width: 0;
+}
+.buscarbutton span{
+    margin: 15px;
+    font-size: 20px;
+}
+.hamburgerbutton{
+    width: 50px;
+    height: 50px;
+}
+.hamburgerbutton:hover,.buscarbutton:hover{
+    cursor: pointer;
+    background: rgb(218, 218, 218);
+}
+.hamburgerbutton span{
+    font-size: 19px;
+    margin:15px 15px;
+}
+
+.sidebar{
+    top: 100px;
+    position:fixed;
+    width: 320px;
+    height: calc(100vh - 100px);
+    background: rgb(242, 242, 242);
+    overflow-x: hidden;
+    overflow-y:hidden;
+    z-index: 97;
+}
+.OcultarMenu{
+    width: 50px;
+}
+
+.buscar{
+    width: 320px;
+    height: 50px;
+}
+.buscar .form-control{
+    max-width: none;
+    width: 260px;
+}
+.buscar .navbar-form{
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    padding-top: 7px;
+}
+.ToggleSearchButton{
+    display: flex;
+}
+.ToggleSearch{
+    display: flex;
+}
+#ElementosPrincipales {
+    margin: 0;
+    width: 320px;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: calc(100vh - 313px);
+    border-bottom: solid;
+    border-bottom-color: gray;
+    border-bottom-width: 1px;
+}
+#ElementosPrincipales ul{
+    margin: 0;
+    padding: 0;
+
+}
+#ElementosPrincipales ul li{
+    height: 48px;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+#ElementosPrincipales .texto{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 100;
+
+}
+#ElementosPrincipales .Indicador{
+    width: 5px;
+    height: 48px;
+}
+#ElementosPrincipales .indicadoractivo{
+    background: #0b93ff;
+}
+#ElementosPrincipales ul li span{
+    margin: 14px;
+    font-size: 20px;
+}
+#ElementosPrincipales ul li:hover{
+    background: rgb(218,218,218);
+}
+
+#ElementosPrincipales li:active{
+    transform: rotateY(15deg);
+}
+.izq{
+    position: absolute;
+    left: 280px;
+}
+#ElementosSecundarios {
+    margin: 0;
+    margin-top: 5px;
+    width: 320px;
+    height: calc(100vh - 312px);
+}
+#ElementosSecundarios ul{
+    margin: 0;
+    padding: 0;
+
+}
+#ElementosSecundarios ul li{
+    height: 48px;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+#ElementosSecundarios .texto{
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 100;
+}
+#ElementosSecundarios .Indicador{
+    width: 5px;
+    height: 48px;
+}
+#ElementosSecundarios .indicadoractivo{
+    background: #0b93ff;
+}
+#ElementosSecundarios ul li span{
+    margin: 14px;
+    font-size: 20px;
+}
+#ElementosSecundarios ul li:hover{
+    background: rgb(218,218,218);
+}
+
+#ElementosSecundarios li:active{
+    transform: rotateY(15deg);
+}
+.ElementoSeleccionado{
+    color: #0b93ff;
+}
+@media(max-width:1024px){
+    .hamburgertop{
+        width: 50px;
+    }
+    .sidebar{
+        width: 50px;
+    }
+    .buscarbutton{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+    .OcultarMenu{
+        width: 320px;
+    }
+    .ConvertSearchButton{
+        display: none;
+    }
+    .ToggleSearchButton{
+    display: none;
+    }
+    .ToggleSearch{
+    display: flex;
+    }
+    .ContentSystem{
+        margin-left: 50px;
+    }
+    .ContentSystem2{
+        margin-left: 320px;
+    }
+}
+@media(max-width:768px){
+    .ContentSystem{
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .ContentSystem2{
+        margin-left: 0;
+    }
+    .hamburgertop{
+        height: 50px;
+        width: 100% !important;
+    }
+    .buscar .form-control{
+        width: 100%;
+    }
+    .buscar .btn{
+        height: 36px;
+    }
+    .buscar{
+        width: calc(100% - 50px);
+        position: fixed;
+        top: 7px;
+        left: 50px;
+        display: none;
+    }
+    .buscar .form-group{
+        width: calc(100% - 36px);
+    }
+    .buscar .navbar-form{
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    .buscarbutton{
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    .sidebar{
+        width: 0;
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+    .OcultarMenu{
+        width: 240px;
+    }
+    .ToggleSearchButton{
+    display: flex;
+    }
+    .buscar .navbar-form{
+        width: 100%;
+    }
+    #ElementosPrincipales{
+        width: 240px;
+        height: calc(100vh - 200px);
+    }
+    .izq{
+        left: 200px;
+    }
+}

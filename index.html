@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable-no, initial-scale-1, maximum-scale-1,minimum-scale-1">
+    <link rel="shortcut icon" type="image/x-icon" href="fonts/favicon-dashboard.ico">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/winstrap.css">
+    <link rel="stylesheet" href="css/sidebarmenu.css">
+    <title>Groovium Música</title>
+    
+</head>
+<body>
+    <div class="hamburgertop" id="HamburgerMenu">
+        <div class="hamburgerbutton" id="HamburgerButton"><span class="glyph glyph-hamburger"></span></div>
+        <div class="buscarbutton" id="SearchButton">
+            <span class="glyph glyph-magnifier"></span>
+        </div>
+        <div class="buscar" id="InputSearch">
+            <form class="navbar-form" role="search">
+                        <div class="form-group">
+                            <input id="SearchInput" class="form-control" type="search" placeholder="Buscar">
+                        </div>
+                        <button class="btn btn-default" type="submit"></button>
+                    </form></div>
+    </div>
+    <div class="sidebar" id="Sidebar">
+        <div id="ElementosPrincipales">
+            <ul>
+                <li class="ElementoSeleccionado">
+                    <div class="Indicador indicadoractivo">&nbsp;</div>
+                    <span class="glyph glyph-home"></span><div class="texto">Explorar</div>
+                </li>
+                <li>
+                    <div class="Indicador">&nbsp;</div>
+                    <span class="glyph glyph-music-info"></span><div class="texto"> Mi música</div>
+                </li>
+                <li>
+                    <div class="Indicador">&nbsp;</div>
+                    <span class="glyph glyph-video"></span><div class="texto"> Recomendaciones</div>
+                </li>
+                <li>
+                    <div class="Indicador">&nbsp;</div>
+                    <span class="glyph glyph-sync"></span><div class="texto"> Radio</div>
+                </li>
+                <li>
+                    <div class="Indicador">&nbsp;</div>
+                    <span class="glyph glyph-preview-link"></span><div class="texto"> Reproducción en curso</div>
+                </li>
+           
+            </ul>
+        </div>
+        <div id="ElementosSecundarios">
+            <ul>
+                <li>
+                    <div class="Indicador">&nbsp;</div>
+                    <span class="glyph glyph-add-friend"></span><div class="texto">Usuario</div><span class="glyph glyph-settings izq"></span>
+                </li>
+                <li>
+                    <div class="Indicador">&nbsp;</div>
+                    <span class="glyph glyph-help"></span><div class="texto"> Ayuda</div>
+                </li>
+                <li>
+                    <div class="Indicador">&nbsp;</div>
+                    <span class="glyph glyph-location"></span><div class="texto">Probar un Music Pass</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ContentSystem" id="Contenido">
+        <h1>Mi música</h1>
+        <div class="table-responsive">
+        <table class="table">
+
+        </table>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    <div class="miniplayer">
+        <div class="infoMusic">
+            <div class="albumArt"></div>
+            <div class="Title"></div>
+            <div class="Artist"></div>
+        </div>
+        <div class="sliderTag"><input type="range"></div>
+        <div class="controls">
+            <span class="glyph glyph-previous"></span>
+            <span class="glyph glyph-play glyph-pause" id="play" onclick="playOrPause();"></span>
+            <span class="glyph glyph-next"></span>
+            <span class="glyph glyph-refresh"></span>
+            <span class="glyph glyph-volume"></span>
+            <span class="glyph glyph-shuffle"></span>
+        </div>
+    </div>
+</body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js');
+    require('./groove.js');
+    window.$ = window.jQuery = require('./js/vendor/jquery.min.js');
+    require('./js/vendor/bootstrap.min.js');
+    
+    require('./js/vendor/sidebarmenu.js');
+    require('./js/vendor/app.js');
+    
+  </script>
+  
+</html>
+ 
